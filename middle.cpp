@@ -75,17 +75,8 @@ int itc_min_num(long long number){
         return number;
     }
     if(number < 0){
-        min = -1;
         number = number * -1;
-        while(number > 0){
-      a = number % 10;
-      number = number / 10;
-        }
-        return -1 * min;
     }
-       if(a > min){
-        min = 9;
-        number = -1 * number;
         while(number > 0){
       a = number % 10;
       number = number / 10;
@@ -95,4 +86,3 @@ int itc_min_num(long long number){
     }
     return min;
       }
-    }

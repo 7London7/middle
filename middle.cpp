@@ -56,16 +56,7 @@ int itc_max_num(long long number){
         return 0;
     }
     if(number < 0){
-        maxi = 9;
         number = -1 * number;
-        while(number > 0){
-      a = number % 10;
-      number = number / 10;
-       if(a <= maxi){
-        maxi = a;
-      }
-    }
-    return  - 1 * maxi;
     }
     if(number > 0){
     while(number > 0){

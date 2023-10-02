@@ -7,25 +7,46 @@ void itc_num_print(int number){
 }
 int itc_len_num(long long number){
     int a;
-    while(number > 0){
+    if(number == 0){
+        return 1;
+    }
+    if(number < 0){
+        number = -1 * number;
+    }
+        while(number > 0){
       number = number / 10;
       a++;
     }
     return a;
+
 }
 int itc_sum_num(long long number){
-    int a;
+    int a, zefra;
+    if(number == 0){
+        return 0;
+    }
+    if(number < 0){
+        number = -1 * number;
+    }
     while(number > 0){
-      a = a + number % 10;
+      zefra = number % 10;
       number = number / 10;
+      a = a + zefra;
     }
     return a;
 }
 long long itc_multi_num(long long number){
-    int a;
+    int a, zefra;
+    if(number == 0){
+        return 0;
+    }
+    if(number < 0){
+        number = -1 * number;
+    }
     while(number > 0){
-      a =  a * number % 10;
+      zefra = number % 10;
       number = number / 10;
+      a = a * zefra;
     }
     return a;
 }

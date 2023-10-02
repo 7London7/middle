@@ -90,19 +90,18 @@ int itc_min_num(long long number){
       a = number % 10;
       number = number / 10;
        if(a > min){
-        min = a;
-      }
-    }
-    return -1 * min;
-    }
-    if(number > 0){
-    while(number > 0){
+        min = 9;
+        number = -1 * number;
+        while(number > 0){
       a = number % 10;
       number = number / 10;
-       if(a < min){
+       if(a <= min){
         min = a;
       }
     }
     return min;
+      }
+    }
+    return -1 * min;
     }
 }

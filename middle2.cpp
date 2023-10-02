@@ -3,29 +3,27 @@ using namespace std;
 #include "middle.h"
 
 int itc_revnbr(int num){
-    int a = 0;
-    int k = 0;
-  a = num % 10;
+    int zefra, ch = 0;
+    while(num > 0){
+  zefra = num % 10;
+    ch = ch * 10 + zefra;
   num = num / 10;
-  k = k * 10 + a;
+    }
+  return ch;
    }
 int itc_rev_num(long long number){
-int a = 0, b, i = 0;
+int a = 0,i = 0;
     int k = 0;
-    while(number > 0){
-  a = number % 10;
-  number = number / 10;
-  k = k * 10 + a;
-    }
-  while(k > 0){
+    number = itc_revnbr(number);
+  while(number > 0){
         i = i + 1;
-      a = k % 10;
-      k = k / 10;
+      a =  number % 10;
+      number = number / 10;
   }
   return i;
 }
 int itc_null_count(long long number){
-    int a, i;
+    int a = 0, i;
     while(number > 0){
       a = number % 10;
       number = number / 10;

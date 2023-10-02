@@ -61,7 +61,7 @@ int itc_max_num(long long number){
         while(number > 0){
       a = number % 10;
       number = number / 10;
-       if(a < maxi){
+       if(a <= maxi){
         maxi = a;
       }
     }

@@ -6,7 +6,7 @@ void itc_num_print(int number){
     cout << number;
 }
 int itc_len_num(long long number){
-    int a;
+    int a = 0;
     if(number == 0){
         return 1;
     }
@@ -21,7 +21,7 @@ int itc_len_num(long long number){
 
 }
 int itc_sum_num(long long number){
-    int a, zefra;
+    int a = 0, zefra;
     if(number == 0){
         return 0;
     }
@@ -36,7 +36,7 @@ int itc_sum_num(long long number){
     return a;
 }
 long long itc_multi_num(long long number){
-    int a, zefra;
+    int a = 1, zefra;
     if(number == 0){
         return 0;
     }
@@ -51,9 +51,9 @@ long long itc_multi_num(long long number){
     return a;
 }
 int itc_max_num(long long number){
-    int a, maxi = -1;
+    int a = 0, maxi = -1;
     if(number == 0){
-        return number;
+        return 0;
     }
     if(number < 0){
         maxi = 9;
@@ -79,7 +79,7 @@ int itc_max_num(long long number){
     }
 }
 int itc_min_num(long long number){
-    int a, min = 9;
+    int a = 0, min = 9;
     if(number == 0){
         return number;
     }

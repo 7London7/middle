@@ -14,6 +14,12 @@ int itc_revnbr(int num){
 int itc_rev_num(long long number){
 int a = 0,i = 0;
     int k = 0;
+if(number == 0){
+return 1;
+}
+if(number < 0){
+number = -1 * number;
+}
     number = itc_revnbr(number);
   while(number > 0){
         i = i + 1;

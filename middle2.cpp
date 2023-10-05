@@ -46,6 +46,12 @@ number = -1 * number;
     }
 bool itc_mirror_num(long long number){
     int i;
+if(number == 0){
+return "TRUE";
+}
+if(number < 0){
+number = -1 * number;
+}
         i = itc_revnbr(number);
    if(number == i){
      return "TRUE";
@@ -55,6 +61,12 @@ bool itc_mirror_num(long long number){
 }
 int itc_mirror_count(long long number){
     int i, b = 1;
+if(number == 0){
+return 1;
+}
+if(number < 0){
+number = -1 * number;
+}
         i = itc_revnbr(number);
         while(b < number){
    if(number == i){

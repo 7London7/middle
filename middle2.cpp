@@ -30,6 +30,12 @@ number = -1 * number;
 }
 int itc_null_count(long long number){
     int a = 0, i;
+if(number == 0){
+return 1;
+}
+if(number < 0){
+number = -1 * number;
+}
     while(number > 0){
       a = number % 10;
       number = number / 10;
